@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Portofolio</title>
+    <style>
+        /* Untuk layar kecil (mobile) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero img {
+        max-width: 100%;
+    }
+    .about-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-details div {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero img {
+        max-width: 80%;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom pada tablet */
+    }
+}
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 901px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tiga kolom pada desktop */
+    }
+}
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            border-bottom: 2px solid black;
+            padding: 10px 20px;
+            background-color: #0b0b60;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #cd9901;
+        }
+        .brand {
+            color: #cd9901;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+        .button {
+            background-color: #0b0b60;
+            text-decoration: none;
+            color: #fcc201;
+        }
+        .hero img {
+            max-width: 300px;
+            height: auto;
+        }
+        .about-title {
+            color: #0b0b60;
+        }
+        .about {
+            text-align: center;
+            padding: 10px;
+        }
+        .about-details {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .about-details div {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 500px;
+        }
+        .about-item {
+            max-width: 100%;
+            height: auto;
+        }
+        .portofolio-text {
+            color: #0b0b60;
+        }
+        .portfolio {
+            text-align: center;
+            padding: 20px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .portfolio-item {
+            border: 3px solid black;
+            padding: 15px;
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .strip-line {
+            border-bottom: 2px solid black;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <span class="brand"><strong>Brand</strong></span>
+            </ul>
+            <ul>
+                <li><a href="#">Header</a></li>
+                <li><a href="#">Biodata</a></li>
+                <li><a href="#">Portofolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2 class="about text">Selamat Datang di Website Saya</h2>
+            <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+            <button class="button">Pelajari lebih lanjut</button>
+        </div>
+        <div>
+            <img src="photo/foto_2.jpg" alt="Gambar Placehorder">
+        </div>
+    </section>
+    <div class="strip-line"></div>
+    <section class="about">
+        <h2 class="about-title">About Me</h2>
+        <p>A brief introduction about myself</p>
+        <div class="about-details">
+            <div>Full Name</div>
+            <div>Education</div>
+            <div>Pekerjaan</div>
+        </div>
+        <div class="about-details">
+            <div>Contact</div>
+            <div>Hobi</div>
+            <div>Alamat</div>
+        </div>
+    </section>
+    <div class="strip-line"></div>
+    <div class="about-item"></div>
+
+    <section class="portfolio">
+        <h2 class="portofolio-text">Portofolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="photo/bmw_4.jpg" alt="350 x 200">
+                <p><strong>Proyek 1</strong></p>
+                <p>Deskripsi proyek 1</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="photo/bmw_10.jpg" alt="350 x 200">
+                <p><strong>Proyek 2</strong></p>
+                <p>Deskripsi proyek 2</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="photo/bmw_3.jpg" alt="350 x 200">
+                <p><strong>Proyek 3</strong></p>
+                <p>Deskripsi proyek 3</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
